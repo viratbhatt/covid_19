@@ -15,13 +15,13 @@ const Info = ( {data: { confirmed, recovered, deaths, lastUpdate } } ) =>
             <Grid container spacing ={3} justify ="center" >
                 <Grid item component = {Card} xs={12} md={3} className={cx (styles.card, styles.infected)}>
                     <CardContent>
-                        <Typography color="textSecondry" gutterBottom>
+                        <Typography color="inherit" gutterBottom>
                             Infected
                         </Typography>
                         <Typography variant="h5">
                             <CountUp start={0} end={confirmed.value} duration={0.5} separator="," />
                         </Typography>
-                        <Typography color="textSecondry">
+                        <Typography color="inherit">
                             {new Date(lastUpdate).toDateString()}
                         </Typography>
                         <Typography variant="body2">
@@ -32,13 +32,13 @@ const Info = ( {data: { confirmed, recovered, deaths, lastUpdate } } ) =>
 
                 <Grid item component = {Card} xs={12} md={3} className={cx (styles.card, styles.recovered)}>
                     <CardContent>
-                        <Typography color="textSecondry" gutterBottom>
+                        <Typography color="inherit" gutterBottom>
                             RECOVERED
                         </Typography>
                         <Typography variant="h5">
                             <CountUp start={0} end={recovered.value} duration={0.5} separator="," />
                         </Typography>
-                        <Typography color="textSecondry">
+                        <Typography color="inherit">
                             {new Date(lastUpdate).toDateString()}
                         </Typography>
                         <Typography variant="body2">
@@ -49,13 +49,13 @@ const Info = ( {data: { confirmed, recovered, deaths, lastUpdate } } ) =>
 
                 <Grid item component = {Card} xs={12} md={3} className={cx (styles.card, styles.deaths)}>
                     <CardContent>
-                        <Typography color="textSecondry" gutterBottom>
+                        <Typography color="inherit" gutterBottom>
                             Deaths
                         </Typography>
                         <Typography variant="h5">
                             <CountUp start={0} end={deaths.value} duration={0.5} separator="," />
                         </Typography>
-                        <Typography color="textSecondry">
+                        <Typography color="inherit">
                             {new Date(lastUpdate).toDateString()}
                         </Typography>
                         <Typography variant="body2">
